@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .color-box {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: red;
+            transition: background-color 0.5s;
+        }
+
+   
+
+        .color_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            list-style-type: none;
+        }
+        ul li {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul li:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+        .color-red { background-color: red; }
+        .color-green { background-color: green; }
+        .color-blue { background-color: blue; }
+        .color-gray { background-color: gray; }
+        li.active {
+            opacity: 100%;
+        }
+        #reset-button {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <ul class="color_container" role="listbox">
+        <li class="color-red active" data-color="red" role="option" aria-selected="true" aria-label="Red"></li>
+        <li class="color-green" data-color="green" role="option" aria-selected="false" aria-label="Green"></li>
+        <li class="color-blue" data-color="blue" role="option" aria-selected="false" aria-label="Blue"></li>
+        <li class="color-gray" data-color="gray" role="option" aria-selected="false" aria-label="Gray"></li>
+    </ul>
+    <div class="color-box"></div>
+    <button id="reset-button" class="btn btn-secondary">Reset</button>
+
+  <script src="./main.js"></script>
+</body>
+</html>
